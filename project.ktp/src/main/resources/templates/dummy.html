@@ -1,30 +1,128 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <title>Dummy</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LIST DUMMY</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="/static.css/dashboard.css" rel="stylesheet">
+        <link href="/static.css/sidebars.css" rel="stylesheet">
+        <style>
+            h2{
+                text-align:center;
+            }
+            tr td{
+                border: 3px solid;
+                text-align: center;
+
+            }
+            tr th{
+                border: 3px solid;
+                text-align: center;
+            }
+
+        </style>
     </head>
     <body>
-        <div>Dummy</div><hr>
-        <div class="table-responsive">
-            <table class="table align-middle">
-                <tr>
-                    <th>NIK</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Foto</th>
-                </tr>
-                <tr th:each="godummy:${goDummy}">
-                      <td th:text="${godummy.id}"></td>
-                      <td th:text="${#calendars.format(godummy.tanggal,'dd-MMM-yyyy')}"></td>
-                      <td><img th:src="@{${'/img?id='+ data.id}}" alt="poto" width="200"></td>
-                      <td></td>
-                </tr>
-            </table>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+        <title>Bootstrap</title>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+    </symbol>
+    </svg>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">DUMMY</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3" href="data">Sign out</a>
+            </div>
         </div>
-    </body>
+    </header>
+
+    <main class="d-flex flex-nowrap">
+        <h1 class="visually-hidden">Sidebars examples</h1>
+
+        <div class="flex-shrink-0 p-3 bg-white" style="width: 280px;">
+<!--    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+      <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+      <span class="fs-5 fw-semibold">Collapsible</span>
+    </a>-->
+        <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+          Home
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <center>
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">DAFTAR DUMMY</h1> 
+                </div>
+            </center>
+            <div class="container">
+                <div class="butoon">
+                    <a href="/create" class="btn btn-info text-white fw-bold btn-lg" >Tambah</a>
+                </div>
+                <br />
+                <br />
+                <div class="search" style="width:300px">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                </div>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tanggal</th>
+                            <th>Foto</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody th:each="data, index: ${data}">
+                    <td th:text="${index.count}" th:id="${data.id}"></td>
+                    <td th:text="${#dates.format(data.tanggal, 'dd-MM-yyyy')}"></td>
+                    <td>
+                        <img th:src="@{${'/img?id='+ data.id}}" alt="poto" width="200">
+                    </td>
+                    <td>
+                        <a class="btn btn-secondary" th:href="@{/edit/{id}(id=${data.id})}">Edit</a>
+                        <a class="btn btn-danger" href="#" th:onclick="|hapusData('${data.id}')|">Delete</a>
+                        </tbody>
+                </table>
+            </div>
+            <script>
+                const hapusData = val => {
+                    if (confirm(`Yakin ingin menghapus data ${val}?`)) {
+                        location.href = `/delete/${val}`;
+                    }
+                }
+            </script>
+        </main>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+
+<script src="/static.js/dashboard.js"></script>
+<script src="/static.js/sidebars.js"></script>
+</body>
 </html>
