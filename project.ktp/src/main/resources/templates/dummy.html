@@ -32,7 +32,7 @@
         </button>
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="data">Sign out</a>
+                <a class="nav-link px-3" href="/ktpdummy/data">Sign out</a>
             </div>
         </div>
     </header>
@@ -47,7 +47,7 @@
     </a>-->
         <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="/read" class="nav-link active" aria-current="page" style="background-color: rgb(34, 87, 126); border: none;">Dummy List</a>
+        <a href="/ktpdummy/read" class="nav-link active" aria-current="page" style="background-color: rgb(34, 87, 126); border: none;">Dummy List</a>
       </li>
     </ul>
   </div>
@@ -62,7 +62,7 @@
             </center>
             <div class="container">
                 <div class="butoon">
-                    <a href="/create" class="btn btn-outline-dark" style="background-color: rgb(146, 180, 236); border: none;">Tambah</a>
+                    <a href="/ktpdummy/create" class="btn btn-outline-dark" style="background-color: rgb(146, 180, 236); border: none;">Tambah</a>
                 </div><br>
                 <table class="table">
                     <thead style="background-color: rgb(217, 215, 241)">
@@ -88,7 +88,7 @@
             <script>
                 const hapusData = val => {
                     if (confirm(`Yakin ingin menghapus data ${val}?`)) {
-                        location.href = `/delete/${val}`;
+                        location.href = `/ktpdummy/delete/${val}`;
                     }
                 }
             </script>
